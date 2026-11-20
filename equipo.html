@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equipo | Vitalmed</title>
+<meta name="description" content="Conocé al equipo médico de Vitalmed.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">Vitalmed</a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    <ul id="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="especialidades.html">Especialidades</a></li>
+      <li><a href="equipo.html" aria-current="page">Equipo</a></li>
+      <li><a href="contactos.html" class="btn btn-sec">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero-interno">
+    <div class="container">
+      <h1>Nuestro equipo médico</h1>
+      <p>Profesionales con experiencia y vocación de servicio, al cuidado de tu salud.</p>
+    </div>
+  </section>
+
+  <section class="equipo-sec">
+    <div class="container">
+      <div class="grid grid-4">
+      <article class="card medico">
+        <div class="foto"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.5"/><path d="M3.5 22c0-5 3.800-8 8.500-8s8.500 3 8.500 8z"/></svg></div>
+        <h3>Dra. Laura Méndez</h3>
+        <p class="esp">Clínica médica</p>
+        <p>Más de 15 años de experiencia en medicina general y prevención. Su foco es escuchar con tiempo cada consulta.</p>
+      </article>
+      <article class="card medico">
+        <div class="foto"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.5"/><path d="M3.5 22c0-5 3.800-8 8.500-8s8.500 3 8.500 8z"/></svg></div>
+        <h3>Dr. Martín Acosta</h3>
+        <p class="esp">Pediatría</p>
+        <p>Acompaña a las familias desde el primer control. Se destaca por su paciencia y su manera clara de explicar.</p>
+      </article>
+      <article class="card medico">
+        <div class="foto"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.5"/><path d="M3.5 22c0-5 3.800-8 8.500-8s8.500 3 8.500 8z"/></svg></div>
+        <h3>Dra. Carolina Ruiz</h3>
+        <p class="esp">Cardiología</p>
+        <p>Especialista en prevención cardiovascular y en el seguimiento de pacientes con hipertensión.</p>
+      </article>
+      <article class="card medico">
+        <div class="foto"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.5"/><path d="M3.5 22c0-5 3.800-8 8.500-8s8.500 3 8.500 8z"/></svg></div>
+        <h3>Lic. Federico Salas</h3>
+        <p class="esp">Kinesiología</p>
+        <p>Trabaja en rehabilitación deportiva y traumatológica, con planes de recuperación a medida.</p>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>Sacá tu turno</h2>
+      <p>Elegí la especialidad que necesitás y coordinamos tu consulta.</p>
+      <a href="contactos.html#turno" class="btn btn-cta">Sacar turno</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>Vitalmed</h4><p>Centro médico integral comprometido con tu bienestar.</p></div>
+      <div><h4>Dirección</h4><p>Av. Principal 1234<br>Salta, Argentina</p></div>
+      <div><h4>Contacto</h4><p><a href="tel:+543874000000">+54 387 400-0000</a><br><a href="mailto:contacto@vitalmed.com">contacto@vitalmed.com</a></p></div>
+      <div><h4>Horarios</h4><p>Lunes a viernes: 8 a 20 h<br>Sábados: 9 a 13 h</p></div>
+    </div>
+    <p class="copy">© 2026 Vitalmed. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  const t=document.querySelector('.menu-toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',e=>{if(e.target.tagName==='A'){m.classList.remove('open');t.setAttribute('aria-expanded',false)}});
+</script>
+</body>
+</html>

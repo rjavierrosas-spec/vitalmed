@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto | Vitalmed</title>
+<meta name="description" content="Contactá a Vitalmed para sacar un turno o hacer una consulta.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">Vitalmed</a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    <ul id="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="especialidades.html">Especialidades</a></li>
+      <li><a href="equipo.html" aria-current="page">Equipo</a></li>
+      <li><a href="contactos.html" class="btn btn-sec" aria-current="page">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero-interno">
+    <div class="container">
+      <h1>Contacto</h1>
+      <p>Escribinos para sacar un turno o resolver cualquier consulta. Te respondemos a la brevedad.</p>
+    </div>
+  </section>
+
+  <section class="equipo-sec" id="turno">
+    <div class="container contacto-grid">
+      <div class="form-card">
+        <h2>Sacá tu turno</h2>
+        <form id="form-contacto" novalidate>
+          <div class="campo"><label for="nombre">Nombre y apellido</label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
+          <div class="campo"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="campo"><label for="tel">Teléfono</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+          <div class="campo">
+            <label for="esp">Especialidad</label>
+            <select id="esp" name="esp" required>
+              <option value="">Elegí una especialidad</option>
+              <option>Clínica médica</option>
+              <option>Pediatría</option>
+              <option>Cardiología</option>
+              <option>Kinesiología</option>
+            </select>
+          </div>
+          <div class="campo"><label for="msg">Mensaje</label><textarea id="msg" name="msg" placeholder="Contanos en qué podemos ayudarte"></textarea></div>
+          <button type="submit" class="btn btn-cta">Enviar consulta</button>
+          <p class="ok" id="ok" role="status"></p>
+        </form>
+      </div>
+
+      <aside class="info-card">
+        <h2>Datos de contacto</h2>
+        <dl>
+          <dt>Dirección</dt><dd>Av. Principal 1234, Salta, Argentina</dd>
+          <dt>Teléfono</dt><dd><a href="tel:+543874000000">+54 387 400-0000</a></dd>
+          <dt>Correo</dt><dd><a href="mailto:contacto@vitalmed.com">contacto@vitalmed.com</a></dd>
+          <dt>Horarios</dt><dd>Lunes a viernes: 8 a 20 h<br>Sábados: 9 a 13 h</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>Vitalmed</h4><p>Centro médico integral comprometido con tu bienestar.</p></div>
+      <div><h4>Dirección</h4><p>Av. Principal 1234<br>Salta, Argentina</p></div>
+      <div><h4>Contacto</h4><p><a href="tel:+543874000000">+54 387 400-0000</a><br><a href="mailto:contacto@vitalmed.com">contacto@vitalmed.com</a></p></div>
+      <div><h4>Horarios</h4><p>Lunes a viernes: 8 a 20 h<br>Sábados: 9 a 13 h</p></div>
+    </div>
+    <p class="copy">© 2026 Vitalmed. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  const t=document.querySelector('.menu-toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',e=>{if(e.target.tagName==='A'){m.classList.remove('open');t.setAttribute('aria-expanded',false)}});
+</script>
+<script>
+  const f=document.getElementById('form-contacto'),ok=document.getElementById('ok');
+  f.addEventListener('submit',e=>{
+    e.preventDefault();
+    const n=f.nombre.value.trim(),m=f.email.value.trim(),s=f.esp.value;
+    ok.classList.add('visible');
+    if(!n||!/^\S+@\S+\.\S+$/.test(m)||!s){
+      ok.textContent='Completá tu nombre, un correo válido y la especialidad para enviar la consulta.';
+      return;
+    }
+    ok.textContent='Gracias, '+n+'. Recibimos tu consulta y te vamos a contactar a la brevedad.';
+    f.reset();
+  });
+</script>
+</body>
+</html>

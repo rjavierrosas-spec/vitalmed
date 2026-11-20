@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Especialidades | Vitalmed</title>
+<meta name="description" content="Especialidades de Vitalmed: clínica médica, pediatría, cardiología y kinesiología.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">Vitalmed</a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    <ul id="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="especialidades.html" aria-current="page">Especialidades</a></li>
+      <li><a href="equipo.html">Equipo</a></li>
+      <li><a href="contactos.html" class="btn btn-sec">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero-interno">
+    <div class="container">
+      <h1>Nuestras Especialidades</h1>
+      <p>Conocé en detalle cada área de atención de Vitalmed y cómo podemos ayudarte.</p>
+    </div>
+  </section>
+
+  <section class="detalle" id="clinica-médica">
+    <div class="container">
+      <h2>Clínica médica</h2>
+      <p>Es la puerta de entrada a tu salud. Nuestros clínicos evalúan tu estado general, realizan controles periódicos y coordinan, cuando hace falta, la derivación con otros especialistas.</p>
+      <p><strong>Qué incluye:</strong></p>
+      <ul><li>Control médico anual y chequeos preventivos</li><li>Seguimiento de enfermedades crónicas</li><li>Certificados de aptitud física</li><li>Indicación y análisis de estudios</li></ul>
+    </div>
+  </section>
+  <section class="detalle" id="pediatria">
+    <div class="container">
+      <h2>Pediatría</h2>
+      <p>Acompañamos el crecimiento de los chicos desde el nacimiento hasta la adolescencia, con un trato cálido que les da confianza a ellos y tranquilidad a sus familias.</p>
+      <p><strong>Qué incluye:</strong></p>
+      <ul><li>Control de niño sano y vacunación</li><li>Seguimiento del desarrollo y la alimentación</li><li>Atención de cuadros agudos</li><li>Orientación a padres y cuidadores</li></ul>
+    </div>
+  </section>
+  <section class="detalle" id="cardiologia">
+    <div class="container">
+      <h2>Cardiología</h2>
+      <p>Cuidamos tu corazón con estudios precisos y un plan adaptado a tu edad y a tus antecedentes, tanto para prevenir como para tratar.</p>
+      <p><strong>Qué incluye:</strong></p>
+      <ul><li>Electrocardiograma y control de presión arterial</li><li>Evaluación de riesgo cardiovascular</li><li>Ecocardiograma y prueba de esfuerzo</li><li>Seguimiento de hipertensión y arritmias</li></ul>
+    </div>
+  </section>
+  <section class="detalle" id="kinesiologia">
+    <div class="container">
+      <h2>Kinesiología</h2>
+      <p>Te ayudamos a recuperar movilidad y a aliviar el dolor con tratamientos personalizados, ya sea después de una lesión, una cirugía o por molestias de todos los días.</p>
+      <p><strong>Qué incluye:</strong></p>
+      <ul><li>Rehabilitación traumatológica y deportiva</li><li>Kinesiología respiratoria</li><li>Tratamiento de dolores de espalda y cuello</li><li>Plan de ejercicios para hacer en casa</li></ul>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>Sacá tu turno</h2>
+      <p>Elegí la especialidad que necesitás y coordinamos tu consulta.</p>
+      <a href="contactos.html#turno" class="btn btn-cta">Sacar turno</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>Vitalmed</h4><p>Centro médico integral comprometido con tu bienestar.</p></div>
+      <div><h4>Dirección</h4><p>Av. Principal 1234<br>Salta, Argentina</p></div>
+      <div><h4>Contacto</h4><p><a href="tel:+543874000000">+54 387 400-0000</a><br><a href="mailto:contacto@vitalmed.com">contacto@vitalmed.com</a></p></div>
+      <div><h4>Horarios</h4><p>Lunes a viernes: 8 a 20 h<br>Sábados: 9 a 13 h</p></div>
+    </div>
+    <p class="copy">© 2026 Vitalmed. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  const t=document.querySelector('.menu-toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+  m.addEventListener('click',e=>{if(e.target.tagName==='A'){m.classList.remove('open');t.setAttribute('aria-expanded',false)}});
+</script>
+</body>
+</html>
